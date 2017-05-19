@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
           final Runnable ViewPagerAddsScroll = new Runnable() {
               @Override
               public void run() {
-                  if (mImagePosition == 3) {
+                  if (mImagePosition == 5) {
                       mImagePosition = 0;
                   }
                   mMainPager.setCurrentItem(mImagePosition++, true);

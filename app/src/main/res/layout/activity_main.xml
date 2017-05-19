@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.deepshooter.tablayout.HomeActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vP_ha_viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/pagerIndicator"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:id="@+id/vI_playIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/play" />
+
+            <TextView
+                android:id="@+id/vT_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/vI_playIcon"
+                android:layout_toRightOf="@+id/vI_playIcon"
+                android:text="@string/description"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vT_subTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/vT_title"
+                android:layout_alignLeft="@+id/vT_title"
+                android:layout_alignRight="@+id/vT_title"
+                android:layout_alignStart="@+id/vT_title"
+                android:layout_below="@+id/vT_title"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:text="@string/description1"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:padding="10dip" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabMode="fixed"
+        android:elevation="3dp"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabSelectedTextColor="@color/colorPrimary" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/toolbar_dropshadow"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tabViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</LinearLayout>

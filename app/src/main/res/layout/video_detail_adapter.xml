@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="1dp"
+    app:cardElevation="2dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/vI_videoThumbnil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/music1" />
+
+        <TextView
+            android:id="@+id/vT_videoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@+id/vI_videoThumbnil"
+            android:layout_toRightOf="@+id/vI_videoThumbnil"
+            android:text="@string/m_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/vImg_vidofrgadp_timeimg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/vT_videoTitle"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/vI_videoThumbnil"
+            android:layout_toRightOf="@+id/vI_videoThumbnil"
+            android:src="@drawable/time" />
+
+        <TextView
+            android:id="@+id/vT_timeAdded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vT_videoTitle"
+            android:layout_marginLeft="3dp"
+            android:textSize="12sp"
+            android:layout_toEndOf="@+id/vImg_vidofrgadp_timeimg"
+            android:layout_toRightOf="@+id/vImg_vidofrgadp_timeimg"
+            android:text="@string/m_time" />
+
+        <TextView
+            android:id="@+id/vT_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vImg_vidofrgadp_timeimg"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/vI_videoThumbnil"
+            android:layout_toRightOf="@+id/vI_videoThumbnil"
+            android:text="@string/m_desc" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
